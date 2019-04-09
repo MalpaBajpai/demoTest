@@ -1,0 +1,165 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "update JSON file",
+    "line": 1,
+    "id": "update-json-file",
+    "tags": [],
+    "uri": "features/updateJSON.feature",
+    "elements": [
+      {
+        "id": "update-json-file;update-json-file",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "update JSON file",
+        "tags": [
+          {
+            "name": "@Update_JSON",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I read file \"demoJSON.json\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I update \"firstName\" as \"Malpaaa\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:45"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I save the file string \"demoJSONNew.json\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:52"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "update XML file",
+    "line": 1,
+    "id": "update-xml-file",
+    "tags": [],
+    "uri": "features/updateXML.feature",
+    "elements": [
+      {
+        "id": "update-xml-file;update-xml-file",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "update XML file",
+        "tags": [
+          {
+            "name": "@Update_XML",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I read file \"demoXML.xml\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I update name \"Malpa\" to \"Malpaaa\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I save the file \"demoXMLNew.xml\"",
+            "match": {
+              "location": "dist/stepDefinition/fileSteps.js:55"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "API test",
+    "line": 1,
+    "id": "api-test",
+    "tags": [],
+    "uri": "features/validateRequestApi.feature",
+    "elements": [
+      {
+        "id": "api-test;validate-get-and-post",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "validate get and post",
+        "tags": [
+          {
+            "name": "@Update_JSON",
+            "line": 3
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I make get request \"/api/users/2\"",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 568000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "demo-test",
+  "version": "1.0.0",
+  "description": "Demo API framework using supertest",
+  "repository": "git@github.com:MalpaBajpai/demoTest.git",
+  "author": "Malpa Bajpai <malpa.bajpai1@gmail.com>",
+  "license": "NONE",
+  "scripts": {
+    "build": "rm -rf dist && babel src -d dist",
+    "test": "cucumber-js --require dist/stepDefinition/ -f json:resources/output/cucumberOutput.json",
+    "start": "npm run build && npm run test",
+    "report": "node dist/utility/cucumberHtmlReportGenerator.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/runtime": "^7.4.3"
+  },
+  "dependencies": {
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^4.0.5",
+    "supertest": "^4.0.2"
+  }
+}
