@@ -6,15 +6,7 @@ const options = {
   jsonFile: path.join(__dirname, '../', '../', 'resources', 'output', 'cucumberOutput.json'),
   output: path.join(__dirname, '../', '../', 'reports', 'cucumber_report.html'),
   reportSuiteAsScenarios: true,
-  launchReport: true,
-  metadata: {
-    'App Version': '0.0.1',
-    'Test Environment': 'STAGING',
-    Browser: 'Chrome',
-    Platform: 'Windows 10',
-    Parallel: 'Scenarios',
-    Executed: 'Remote',
-  },
+  launchReport: true
 };
 
 console.log(options.jsonFile);
