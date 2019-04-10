@@ -21,6 +21,7 @@
   "dependencies": {
     "cucumber": "^5.1.0",
     "cucumber-html-reporter": "^4.0.5",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "xml-js": "^1.6.11"
   }
 }

@@ -26,20 +26,20 @@
             "line": 5,
             "name": "I read file \"demoJSON.json\"",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:17"
+              "location": "dist/stepDefinition/fileSteps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 3000000
+              "duration": 4000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "I update \"firstName\" as \"Malpaaa\"",
+            "name": "I update \"firstName\" as \"Malpaaa\" in JSON file",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:45"
+              "location": "dist/stepDefinition/fileSteps.js:47"
             },
             "result": {
               "status": "passed"
@@ -49,12 +49,13 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I save the file string \"demoJSONNew.json\"",
+            "name": "I save the file string \"demoJSONNew.json\" in JSON file",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:52"
+              "location": "dist/stepDefinition/fileSteps.js:51"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -88,36 +89,37 @@
             "line": 5,
             "name": "I read file \"demoXML.xml\"",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:17"
+              "location": "dist/stepDefinition/fileSteps.js:19"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 2000000
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
             "line": 6,
-            "name": "I update name \"Malpa\" to \"Malpaaa\"",
+            "name": "I update key \"name\" to \"Malpaaa\" in XML file",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:49"
+              "location": "dist/stepDefinition/fileSteps.js:54"
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 4000000
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I save the file \"demoXMLNew.xml\"",
+            "name": "I save the file \"demoXMLNew.xml\" in XML file",
             "match": {
-              "location": "dist/stepDefinition/fileSteps.js:55"
+              "location": "dist/stepDefinition/fileSteps.js:60"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -130,16 +132,16 @@
     "line": 1,
     "id": "api-test",
     "tags": [],
-    "uri": "features/validateRequestApi.feature",
+    "uri": "features/validateAPI.feature",
     "elements": [
       {
-        "id": "api-test;validate-get-and-post",
+        "id": "api-test;validate-status-and-userid-of-get",
         "keyword": "Scenario",
         "line": 4,
-        "name": "validate get and post",
+        "name": "validate status and userId of GET",
         "tags": [
           {
-            "name": "@Update_JSON",
+            "name": "@Validate_GET",
             "line": 3
           }
         ],
@@ -149,13 +151,89 @@
             "arguments": [],
             "keyword": "Given ",
             "line": 5,
-            "name": "I make get request \"/api/users/2\"",
+            "name": "I make get request \"/posts/1\"",
             "match": {
-              "location": "dist/stepDefinition/apiSteps.js:14"
+              "location": "dist/stepDefinition/apiSteps.js:17"
             },
             "result": {
               "status": "passed",
-              "duration": 568000000
+              "duration": 207000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I validate status code \"200\"",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:76"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I validate key \"userId\" has value \"1\" in body",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:79"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-test;validate-status-and-id-of-post",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "validate status and id of POST",
+        "tags": [
+          {
+            "name": "@Validate_POST",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I make post request \"/posts\"",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I validate status code \"201\"",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:76"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I validate key \"id\" has value \"101\" in body",
+            "match": {
+              "location": "dist/stepDefinition/apiSteps.js:79"
+            },
+            "result": {
+              "status": "passed"
             }
           }
         ]
